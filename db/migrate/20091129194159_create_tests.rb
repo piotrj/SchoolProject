@@ -1,8 +1,8 @@
 class CreateTests < ActiveRecord::Migration
   def self.up
     create_table :tests do |t|
-      t.string :Name
-      t.int :OwnerID
+      t.string :name
+      t.belongs_to :user
 
       t.timestamps
     end

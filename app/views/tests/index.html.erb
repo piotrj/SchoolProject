@@ -1,0 +1,17 @@
+<h1>Test listing</h1>
+	<table>
+		<% @tests.each do |test| %>
+			<tr>
+				<td>
+					<%=h test.id %>
+				</td>
+				<td>
+					<%=h test.name %>
+				</td>
+				<td>
+					<%=h test.user.email %>
+				</td>
+			</tr>
+		<% end %>
+	</table>
+

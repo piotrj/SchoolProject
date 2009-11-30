@@ -12,10 +12,10 @@
 ActiveRecord::Schema.define(:version => 20091129194159) do
 
   create_table "tests", :force => true do |t|
-    t.string   "Name"
+    t.string   "name"
+    t.integer  "user_id"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.integer  "OwnerID"
   end
 
   create_table "user_roles", :force => true do |t|

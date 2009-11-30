@@ -1,7 +1,7 @@
 <% if current_user %>
 	Logged in as <%=current_user.email%>
 	<%= link_to "Logout", logout_path%>
-	<%= link_to "AddTest", :controller => 'tests', :action => 'add', :id => current_user%>
+	<%= link_to "AddTest", new_test_path%>
 <% else %>
 	<%= link_to "Login", login_path%>
 	<%= link_to "Register", new_user_path%>

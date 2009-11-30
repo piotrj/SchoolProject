@@ -5,7 +5,10 @@ ActionController::Routing::Routes.draw do |map|
   map.logout "logout", :controller => "user_sessions", :action => "destroy"
   
   map.resources :user_sessions
-  map.resources :users
+  map.resources :users do |user|
+  	user.resources :tests
+  end
+	map.resources :tests
 
   # Sample of regular route:
   #   map.connect 'products/:id', :controller => 'catalog', :action => 'view'

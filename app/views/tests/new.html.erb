@@ -1,0 +1,13 @@
+<h1>New test</h1>
+
+<% form_for(@test) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :Name %><br />
+    <%= f.text_field :name %>
+  </p>
+  <p>
+    <%= f.submit 'Create' %>
+  </p>
+<% end %>
