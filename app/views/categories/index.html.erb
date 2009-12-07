@@ -1,0 +1,17 @@
+<h1>Categories listing</h1>
+	<table>
+		<% @categories.each do |category| %>
+			<tr>
+				<td>
+					<%=h category.id %>
+				</td>
+				<td>
+					<%=h category.name %>
+				</td>
+				<td>
+					<%=h category.user.email %>
+				</td>
+			</tr>
+		<% end %>
+	</table>
+

@@ -7,8 +7,10 @@ ActionController::Routing::Routes.draw do |map|
   map.resources :user_sessions
   map.resources :users do |user|
   	user.resources :tests
+  	user.resources :categories
   end
 	map.resources :tests
+	map.resources :categories
 
   # Sample of regular route:
   #   map.connect 'products/:id', :controller => 'catalog', :action => 'view'

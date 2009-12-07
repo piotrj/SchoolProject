@@ -3,4 +3,5 @@ class User < ActiveRecord::Base
   
   belongs_to :user_role
   has_many :tests
+  has_many :categories
 end
