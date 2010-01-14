@@ -1,0 +1,12 @@
+!!! Strict
+
+%html{:xmlns => "http://www.w3.org/1999/xhtml", :lang => "en", "xml:lang" => "en"}
+  %head
+    %meta{"http-equiv" => "Content-type", :content => "text/html; charset=utf-8" }
+    %link{:rel => "stylesheet", :href => "/stylesheets/application.css", :type => "text/css", :media => "screen", :charset => "utf-8" }
+    %title= @title
+  
+  %body
+    = render :partial => 'layouts/user_navigation'
+    = yield 
+  

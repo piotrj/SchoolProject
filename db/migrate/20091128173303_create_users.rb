@@ -5,6 +5,7 @@ class CreateUsers < ActiveRecord::Migration
       t.string :crypted_password
       t.string :password_salt
       t.string :persistence_token
+      t.boolean :first_login, :default => 0
       t.belongs_to :user_role
       t.timestamps
     end
