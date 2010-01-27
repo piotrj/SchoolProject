@@ -9,11 +9,18 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20100107220408) do
+ActiveRecord::Schema.define(:version => 20100127134031) do
 
   create_table "categories", :force => true do |t|
     t.string   "name"
     t.integer  "user_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "questions", :force => true do |t|
+    t.string   "text"
+    t.integer  "category_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -36,7 +43,6 @@ ActiveRecord::Schema.define(:version => 20100107220408) do
     t.string   "crypted_password"
     t.string   "password_salt"
     t.string   "persistence_token"
-    t.boolean  "first_login",       :default => false
     t.integer  "user_role_id"
     t.datetime "created_at"
     t.datetime "updated_at"

@@ -9,8 +9,9 @@ ActionController::Routing::Routes.draw do |map|
   	user.resources :tests
   	user.resources :categories
   end
-	map.resources :tests
-	map.resources :categories
+  map.resources :tests
+  map.resources :categories
+  map.resources :questions
 
   # Sample of regular route:
   #   map.connect 'products/:id', :controller => 'catalog', :action => 'view'
