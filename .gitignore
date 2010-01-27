@@ -2,5 +2,5 @@
 .DS_Store
 *.log
 config/database.yml
-# config/environments/development.rb
+config/environments/development.rb
 db/schema.rb
