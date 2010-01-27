@@ -11,14 +11,94 @@
     <script type="text/javascript" charset="utf-8">
   
     </script>
+    
+    <style>
+      body {
+        font-family: "Helvetica Neue", Arial, Helvetica, sans-serif;
+      }
+      #container {
+        width: 960px;
+        margin: 0 auto;
+      }
+      #teacher {
+        float: left;
+        width: 459px;
+        border-right: 1px solid black;
+        padding: 10px;
+      }
+      #student {
+        float: left;
+        width: 460px;
+        padding: 10px;
+      }
+      
+      #teacher form{
+        margin: 0 auto;
+        width: 240px;
+      }
+      
+      #teacher h1, #student h1 {
+        text-align: center;
+      }
+      
+      #teacher label {
+        display: inline-block;
+        line-height: 1.8;
+        vertical-align: top;
+        width: 120px;
+        margin: 0;
+      }
+      
+      #teacher input {
+        width: 109px;
+        margin: 0;
+      }
+      
+      #teacher .button {
+        width: 60px;
+        margin-left: 180px;
+        
+      }
+      
+      #student a {
+        font-size: 16px;
+        display: block;
+        width: 120px;
+        margin: 0 auto;
+        text-align: center;
+      }
+    </style>
   </head>
   <body>
-    <div id="header">
-      
-    </div>
-    <div id="content">
-    </div>
-    <div id="footer">
+    <div id="container">
+      <div id="header">
+      </div>
+      <div id="content">
+        <div id="teacher">
+          <h1>Teacher</h1>
+          <form>
+            <p>
+              <label for="login">Login</label>
+              <input type="text" name="login" id="login"/>
+            </p>
+            <p>
+              <label for="password">Password</label>
+              <input type="password" name="password" id="password"/>
+            </p>
+            <p>
+              <input type="submit" value="Login" class="button">
+            </p>
+          </form>
+        </div>
+        <div id="student">
+          <h1>Student</h1>
+          <p>
+            <a href="#">Write a test</a>
+          </p>
+        </div>
+      </div>
+      <div id="footer">
+      </div>
     </div>
   </body>
 </html>
