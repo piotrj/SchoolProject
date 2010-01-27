@@ -3,3 +3,4 @@
 *.log
 config/database.yml
 # config/environments/development.rb
+db/schema.rb
