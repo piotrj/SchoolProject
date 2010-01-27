@@ -1,6 +1,6 @@
 class CreateTests < ActiveRecord::Migration
   def self.up
-    create_table :tests do |t|
+    create_table :school_tests do |t|
       t.string :name
       t.belongs_to :user
 
@@ -9,6 +9,6 @@ class CreateTests < ActiveRecord::Migration
   end
 
   def self.down
-    drop_table :tests
+    drop_table :school_tests
   end
 end

@@ -1,20 +1,20 @@
-class TestsController < ApplicationController
+class SchoolTestsController < ApplicationController
 	
 	def index
 		if params[:user_id]
   		@user = User.find(params[:user_id])
   		@tests = @user.tests
   	else
-  		@tests = Test.all
+  		@tests = SchoolTest.all
   	end
   end
 	
 	def new
-    @test = Test.new
+    @test = SchoolTest.new
   end
   
   def create  	
-  	@test=Test.new(params[:test])
+  	@test=SchoolTest.new(params[:test])
   	@test.user=current_user
   	respond_to do |format|
       if @test.save

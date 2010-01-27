@@ -6,7 +6,7 @@ ActionController::Routing::Routes.draw do |map|
   
   map.resources :user_sessions
   map.resources :users do |user|
-  	user.resources :tests
+  	user.resources :school_tests
   	user.resources :categories
   end
 	map.resources :tests

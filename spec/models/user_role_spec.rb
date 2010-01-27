@@ -1,13 +1,9 @@
 require 'spec_helper'
 
 describe UserRole do
-  before(:each) do
-    @valid_attributes = {
-      
-    }
-  end
-
-  it "should create a new instance given valid attributes" do
-    UserRole.create!(@valid_attributes)
+  describe "when creating" do
+    it "should create new instance given valid attributes" do
+      Factory(:user_role).valid?.should be_true
+    end
   end
 end

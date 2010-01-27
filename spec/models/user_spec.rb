@@ -1,12 +1,8 @@
 require File.dirname(__FILE__) + '/../spec_helper'
 describe User do
-  before(:each) do
-    @valid_attributes = {
-      
-    }
-  end
-
-  it "should create a new instance given valid attributes" do
-    User.create!(@valid_attributes)
+  describe "when creating" do
+    it "should create new instance given valid attributes" do
+      Factory(:user).valid?.should be_true
+    end
   end
 end

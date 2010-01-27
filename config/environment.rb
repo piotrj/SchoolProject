@@ -15,13 +15,19 @@ Rails::Initializer.run do |config|
   # config.load_paths += %W( #{RAILS_ROOT}/extras )
 
   # Specify gems that this application depends on and have them installed with rake gems:install
-  config.gem "haml", :version => ">= 2.2.6"
-  config.gem "rspec", :version => ">= 1.2.8", :lib => false
-  config.gem "rspec-rails", :lib => false
-  config.gem "authlogic", :version => ">= 2.1.2"
   # config.gem "hpricot", :version => '0.6', :source => "http://code.whytheluckystiff.net"
   # config.gem "sqlite3-ruby", :lib => "sqlite3"
   # config.gem "aws-s3", :lib => "aws/s3"
+  
+  config.gem "haml", :version => ">= 2.2.6"
+  config.gem "authlogic", :version => ">= 2.1.2"
+  
+  
+  #development gems
+  config.gem "factory_girl", :source => "http://gemcutter.org"
+  config.gem "rspec", :version => ">= 1.2.8", :lib => false
+  config.gem "rspec-rails", :lib => false
+
 
   # Only load the plugins named here, in the order given (default is alphabetical).
   # :all can be used as a placeholder for all plugins not explicitly named
