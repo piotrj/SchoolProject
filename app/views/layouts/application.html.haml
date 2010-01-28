@@ -7,7 +7,9 @@
     %title= @title
   
   %body
-    -if current_user
-      = render :partial => 'layouts/user_navigation'
-    = yield 
+    #container
+      #header
+        = render :partial => "layouts/header"
+      #content
+        = yield 
   

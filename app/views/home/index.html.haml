@@ -1,11 +1,9 @@
-#container
-  #frontpage
-    #teacher
-      %h1
-        Teacher
-      =render :partial => "user_sessions/form", :locals => {:user_session => @user_session}
-    #student
-      %h1
-        Student
-      %p
-        Write a test
+#teacher
+  %h1
+    Teacher
+  =render :partial => "user_sessions/form", :locals => {:user_session => @user_session}
+#student
+  %h1
+    Student
+  %p
+    %a Write a test

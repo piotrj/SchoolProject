@@ -1,17 +1,59 @@
 body {
   font-family: "Helvetica Neue", Arial, Helvetica, sans-serif;
+  color: #414141;
 }
 #container {
   width: 960px;
   margin: 0 auto;
 }
 
+#user_nav {
+  float: right;
+  font-size: 12px;
+  padding-top: 18px;
+}
+
+ul#main_nav {
+  float: left;
+  margin: 0;
+  font-size: 16px;
+}
+
+ul#main_nav li{
+  display: inline-block;
+  text-align: center;
+}
+
+ul#main_nav li a, ul#main_nav span {
+  display: inline-block;
+  padding-top: 14px;
+  padding-bottom: 4px;
+  color: #414141;
+  width: 80px;
+  text-decoration: none;
+}
+
+ul#main_nav li:hover a{
+  background-color: #D3D3D3;
+}
+
+#logo {
+  float: left;
+  font-size: 30px;
+  font-weight: bold;
+}
+
+#content {
+  clear: both;
+  border-top: 1px solid #414141;
+  padding-top: 20px;
+  
+}
+
 #frontpage {
   padding-top: 15%;
 }
-#header {
-  height: 200px;
-}
+
 #teacher {
   float: left;
   width: 459px;
