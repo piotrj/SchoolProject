@@ -1,103 +1,109 @@
-body {
-  font-family: "Helvetica Neue", Arial, Helvetica, sans-serif;
-  color: #414141;
-}
-#container {
-  width: 960px;
-  margin: 0 auto;
-}
-
-#user_nav {
-  float: right;
-  font-size: 12px;
-  padding-top: 18px;
-}
-
-ul#main_nav {
-  float: left;
-  margin: 0;
-  font-size: 16px;
-}
-
-ul#main_nav li{
-  display: inline-block;
-  text-align: center;
-}
-
-ul#main_nav li a, ul#main_nav span {
-  display: inline-block;
-  padding-top: 14px;
-  padding-bottom: 4px;
-  color: #414141;
-  width: 80px;
-  text-decoration: none;
-}
-
-ul#main_nav li:hover a{
-  background-color: #D3D3D3;
-}
-
-#logo {
-  float: left;
-  font-size: 30px;
-  font-weight: bold;
-}
-
-#content {
-  clear: both;
-  border-top: 1px solid #414141;
-  padding-top: 20px;
+  body {
+    font-family: "Helvetica Neue", Arial, Helvetica, sans-serif;
+    color: #414141;
+  }
+  #container {
+    width: 1000px;
+    margin: 0 auto;
+  }
   
-}
-
-#frontpage {
-  padding-top: 15%;
-}
-
-#teacher {
-  float: left;
-  width: 459px;
-  border-right: 1px solid black;
-  padding: 10px;
-}
-#student {
-  float: left;
-  width: 460px;
-  padding: 10px;
-}
-
-#teacher form{
-  margin: 0 auto;
-  width: 240px;
-}
-
-#teacher h1, #student h1 {
-  text-align: center;
-}
-
-#teacher label {
-  display: inline-block;
-  line-height: 1.8;
-  vertical-align: top;
-  width: 120px;
-  margin: 0;
-}
-
-#teacher input {
-  width: 109px;
-  margin: 0;
-}
-
-#teacher .button {
-  width: 60px;
-  margin-left: 180px;
+  #header {
+    padding: 0 20px;
+  }
   
-}
+  #user_nav {
+    float: right;
+    font-size: 12px;
+    padding-top: 18px;
+  }
+  
+  ul#main_nav {
+    float: left;
+    margin: 0;
+    font-size: 16px;
+  }
+  
+  ul#main_nav li{
+    display: inline-block;
+    text-align: center;
+  }
+  
+  ul#main_nav li a, ul#main_nav span {
+    display: inline-block;
+    padding-top: 14px;
+    padding-bottom: 4px;
+    color: #414141;
+    width: 80px;
+    text-decoration: none;
+  }
+  
+  ul#main_nav li:hover a{
+    background-color: #D3D3D3;
+  }
+  
+  #logo {
+    float: left;
+    font-size: 30px;
+    font-weight: bold;
+  }
+  
+  #content {
+    clear: both;
+    border-top: 1px solid #414141;
+    padding: 20px 20px 0 20px;
+    
+  }
+  
+  #frontpage {
+    padding-top: 15%;
+  }
 
-#student a {
-  font-size: 16px;
-  display: block;
-  width: 120px;
-  margin: 0 auto;
-  text-align: center;
-}
+  #teacher {
+    float: left;
+    width: 459px;
+    border-right: 1px solid black;
+    padding: 10px;
+  }
+  #student {
+    float: left;
+    width: 460px;
+    padding: 10px;
+  }
+  
+  #teacher form{
+    margin: 0 auto;
+    width: 240px;
+  }
+  
+  #teacher h1, #student h1 {
+    margin: 20px auto 0 auto;
+    width: 240px;
+  }
+  
+  #teacher label {
+    display: inline-block;
+    line-height: 1.8;
+    vertical-align: top;
+    width: 120px;
+    margin: 0;
+  }
+  
+  #teacher input {
+    width: 109px;
+    margin: 0;
+  }
+  
+  #teacher .button {
+    width: 60px;
+    margin-left: 180px;
+    
+  }
+  
+  #student a {
+    font-size: 16px;
+    display: block;
+    width: 120px;
+    margin: 0 auto;
+    text-align: center;
+  }
+</style>
