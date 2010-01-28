@@ -13,6 +13,10 @@ class User < ActiveRecord::Base
     saved
   end
   
+  def admin?() 
+    user_role.name = "admin"
+  end
+  
   def self.get_teacher_role()
     UserRole.find_by_name("teacher")
   end

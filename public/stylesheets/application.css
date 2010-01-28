@@ -17,18 +17,18 @@
     padding-top: 18px;
   }
   
-  ul#main_nav {
+  ul.menu {
     float: left;
     margin: 0;
     font-size: 16px;
   }
   
-  ul#main_nav li{
+  ul.menu li{
     display: inline-block;
     text-align: center;
   }
   
-  ul#main_nav li a, ul#main_nav span {
+  ul.menu li a, ul#menu span {
     display: inline-block;
     padding-top: 14px;
     padding-bottom: 4px;
@@ -37,7 +37,7 @@
     text-decoration: none;
   }
   
-  ul#main_nav li:hover a{
+  ul.menu li:hover a{
     background-color: #D3D3D3;
   }
   
