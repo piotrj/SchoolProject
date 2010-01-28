@@ -1,10 +1,1 @@
-- form_for @user_session do |f|
-  %p= f.error_messages
-  .input
-    = f.label :email
-    = f.text_field :email
-  .input
-    = f.label :password
-    = f.password_field :password
-  
-  = f.submit "Submit"
+= render :partial => 'form', :locals => {:user_session => @user_session}

@@ -1,15 +1,16 @@
-- form_for @user do |f| 
+- form_for user do |f| 
   = f.error_messages 
-  .input
+  %p
     = f.label :email 
     = f.text_field :email 
   
-  .input
+  %p
     = f.label :password 
     = f.password_field :password 
   
-  .input
+  %p
     = f.label :password_confirmation 
     = f.password_field :password_confirmation 
   
-  %p= f.submit "Submit" 
+  %p
+    = f.submit "Submit" 

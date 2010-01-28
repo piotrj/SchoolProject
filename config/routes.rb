@@ -9,7 +9,7 @@ ActionController::Routing::Routes.draw do |map|
   	user.resources :school_tests
   	user.resources :categories
   end
-  map.resources :tests
+  map.resources :school_tests
   map.resources :categories
   map.resources :questions
 
