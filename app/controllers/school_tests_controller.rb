@@ -1,4 +1,5 @@
 class SchoolTestsController < ApplicationController
+	before_filter :require_user
 	
 	def index
 		if params[:user_id]

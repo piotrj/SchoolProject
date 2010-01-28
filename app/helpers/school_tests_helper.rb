@@ -1,0 +1,2 @@
+module SchoolTestsHelper
+end

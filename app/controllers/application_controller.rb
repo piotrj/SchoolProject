@@ -10,6 +10,15 @@ class ApplicationController < ActionController::Base
   # Scrub sensitive parameters from your log
   filter_parameter_logging :password
   
+  def require_user
+    send_unauthorized if current_user.nil?
+  end
+  
+  def send_unauthorized(message = "Unauthorized access")
+    #TODO: create custom Exception for unauthorized access
+    raise message
+  end
+  
   private
 
   def current_user_session
