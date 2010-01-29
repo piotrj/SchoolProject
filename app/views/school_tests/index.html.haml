@@ -1,0 +1,10 @@
+%h1
+  Test listing
+%ul.actions
+  %li
+    =link_to "Add Test", new_school_test_path
+%ul
+  - @tests.each do |test|
+    %li
+      =h test.name
+

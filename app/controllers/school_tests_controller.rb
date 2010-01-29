@@ -4,10 +4,10 @@ class SchoolTestsController < ApplicationController
 	def index
 		if params[:user_id]
   		@user = User.find(params[:user_id])
-  		@tests = @user.tests
-  	else
-  		@tests = SchoolTest.all
+  	else 
+  	  @user = current_user
   	end
+  	@tests = @user.school_tests
   end
 	
 	def new
@@ -15,7 +15,7 @@ class SchoolTestsController < ApplicationController
   end
   
   def create  	
-  	@test=SchoolTest.new(params[:test])
+  	@test=SchoolTest.new(params[:school_test])
   	@test.user=current_user
   	respond_to do |format|
       if @test.save

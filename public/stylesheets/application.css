@@ -1,109 +1,127 @@
-  body {
-    font-family: "Helvetica Neue", Arial, Helvetica, sans-serif;
-    color: #414141;
-  }
-  #container {
-    width: 1000px;
-    margin: 0 auto;
-  }
-  
-  #header {
-    padding: 0 20px;
-  }
-  
-  #user_nav {
-    float: right;
-    font-size: 12px;
-    padding-top: 18px;
-  }
-  
-  ul.menu {
-    float: left;
-    margin: 0;
-    font-size: 16px;
-  }
-  
-  ul.menu li{
-    display: inline-block;
-    text-align: center;
-  }
-  
-  ul.menu li a, ul#menu span {
-    display: inline-block;
-    padding-top: 14px;
-    padding-bottom: 4px;
-    color: #414141;
-    width: 80px;
-    text-decoration: none;
-  }
-  
-  ul.menu li:hover a{
-    background-color: #D3D3D3;
-  }
-  
-  #logo {
-    float: left;
-    font-size: 30px;
-    font-weight: bold;
-  }
-  
-  #content {
-    clear: both;
-    border-top: 1px solid #414141;
-    padding: 20px 20px 0 20px;
-    
-  }
-  
-  #frontpage {
-    padding-top: 15%;
-  }
+body {
+  font-family: "Helvetica Neue", Arial, Helvetica, sans-serif;
+  color: #414141;
+}
+#container {
+  width: 1000px;
+  margin: 0 auto;
+}
 
-  #teacher {
-    float: left;
-    width: 459px;
-    border-right: 1px solid black;
-    padding: 10px;
-  }
-  #student {
-    float: left;
-    width: 460px;
-    padding: 10px;
-  }
+#header {
+  padding: 0 20px;
+}
+
+#user_nav {
+  float: right;
+  font-size: 12px;
+  padding-top: 18px;
+}
+
+ul.menu {
+  float: left;
+  margin: 0;
+  font-size: 16px;
+}
+
+ul.menu li{
+  display: inline-block;
+  text-align: center;
+}
+
+ul.menu li a, ul#menu span {
+  display: inline-block;
+  padding-top: 14px;
+  padding-bottom: 4px;
+  color: #414141;
+  width: 80px;
+  text-decoration: none;
+}
+
+ul.menu li:hover a{
+  background-color: #D3D3D3;
+}
+
+#logo {
+  float: left;
+  font-size: 30px;
+  font-weight: bold;
+}
+
+#content {
+  clear: both;
+  border-top: 1px solid #414141;
+  padding: 20px 20px 0 20px;
   
-  #teacher form{
-    margin: 0 auto;
-    width: 240px;
-  }
+}
+
+#frontpage {
+  padding-top: 15%;
+}
+
+#teacher {
+  float: left;
+  width: 459px;
+  border-right: 1px solid black;
+  padding: 10px;
+}
+#student {
+  float: left;
+  width: 460px;
+  padding: 10px;
+}
+
+#teacher form{
+  margin: 0 auto;
+  width: 240px;
+}
+
+#teacher h1, #student h1 {
+  margin: 20px auto 0 auto;
+  width: 240px;
+}
+
+#teacher label {
+  display: inline-block;
+  line-height: 1.8;
+  vertical-align: top;
+  width: 120px;
+  margin: 0;
+}
+
+#teacher input {
+  width: 109px;
+  margin: 0;
+}
+
+#teacher .button {
+  width: 60px;
+  margin-left: 180px;
   
-  #teacher h1, #student h1 {
-    margin: 20px auto 0 auto;
-    width: 240px;
-  }
-  
-  #teacher label {
-    display: inline-block;
-    line-height: 1.8;
-    vertical-align: top;
-    width: 120px;
-    margin: 0;
-  }
-  
-  #teacher input {
-    width: 109px;
-    margin: 0;
-  }
-  
-  #teacher .button {
-    width: 60px;
-    margin-left: 180px;
-    
-  }
-  
-  #student a {
-    font-size: 16px;
-    display: block;
-    width: 120px;
-    margin: 0 auto;
-    text-align: center;
-  }
-</style>
+}
+
+#student a {
+  font-size: 16px;
+  display: block;
+  width: 120px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+ul.actions {
+  margin: 0;
+  list-style: none;
+  float: right;
+  padding: 0;
+}
+
+ul.actions li {
+  width: 150px;
+  padding: 10px 0 10px 20px;
+  border: solid #414141;
+  border-width: 1px 0;
+  margin-bottom: 10px;
+}
+
+ul.actions li:hover {
+  background-color: #D3D3D3;
+}

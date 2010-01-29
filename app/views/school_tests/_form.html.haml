@@ -1,0 +1,9 @@
+-form_for(test) do |f|
+  %p
+    = f.error_messages
+
+  %p
+    = f.label :name
+    = f.text_field :name
+  %p
+    = f.submit 'Create'

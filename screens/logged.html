@@ -120,6 +120,26 @@
         margin: 0 auto;
         text-align: center;
       }
+      
+      ul.actions {
+        margin: 0;
+        list-style: none;
+        float: right;
+        padding: 0;
+      }
+      
+      ul.actions li {
+        width: 150px;
+        padding: 10px 0 10px 20px;
+        border: solid #414141;
+        border-width: 1px 0;
+        margin-bottom: 10px;
+      }
+      
+      ul.actions li:hover {
+        background-color: #D3D3D3;
+      }
+      
     </style>
   </head>
   <body>
@@ -139,11 +159,16 @@
       </div>
       <div id="content">
         <h1>Tests</h1>
+        <ul class="actions">
+          <li><a href="#">Add Test</a></li>
+        </ul>
         <ul class="items_list">
           <li>Test 1</li>
           <li>Test 2 2 2</li>
           <li>Fourier's transform</li>
         </ul>
+        
+
       </div>
       <div id="footer">
       </div>
