@@ -1,0 +1,10 @@
+%h1
+  Category listing
+%ul.actions
+  %li
+    =link_to "Add Category", new_category_path
+%ul
+  - @categories.each do |category|
+    %li
+      =h category.name
+

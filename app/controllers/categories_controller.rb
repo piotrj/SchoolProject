@@ -19,10 +19,10 @@ class CategoriesController < ApplicationController
   	respond_to do |format|
       if @category.save
         flash[:notice] = 'Category was successfully created.'
-        format.html { redirect_to root_url }
+        format.html { redirect_to categories_path }
       else
       	flash[:error] = 'Category was not created.'
-        format.html { redirect_to root_url }
+        format.html { redirect_to url_for categories_path }
       end
     end
   end
