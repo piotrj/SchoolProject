@@ -5,17 +5,21 @@ ActionController::Routing::Routes.draw do |map|
   map.logout "logout", :controller => "user_sessions", :action => "destroy"
   
   map.resources :user_sessions
+  
   map.resources :users do |user|
   	user.resources :school_tests
   	user.resources :categories
   end
+  
   map.resources :school_tests
+  
   map.resources :categories do |category|
     category.resources :questions
   end
   
-  map.resources :question, :except => [:new, :create]
-
+  map.resources :question, :except => [:new, :create] do |question|
+    question.resources :answers
+  end
 
   # Sample of regular route:
   #   map.connect 'products/:id', :controller => 'catalog', :action => 'view'

@@ -30,4 +30,21 @@ class CategoriesController < ApplicationController
   def show
     @category = Category.find(params[:id])
   end
+  
+  def edit
+    @category = Category.find(params[:id])
+  end
+  
+  def update
+    @category = Category.find(params[:id])
+  	respond_to do |format|
+      if @category.update_attributes(params[:category])
+        flash[:notice] = 'Category was successfully updated.'
+        format.html { redirect_to category_path(@category) }
+      else
+      	flash[:error] = 'Category was not updated.'
+        format.html { redirect_to url_for category_path(@category) }
+      end
+    end
+  end
 end
