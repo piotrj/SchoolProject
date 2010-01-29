@@ -1,9 +1,9 @@
 class SchoolTestsController < ApplicationController
 	before_filter :require_user
 	
-	def index
-		if params[:user_id]
-  		@user = User.find(params[:user_id])
+  def index
+    if params[:user_id]
+	    @user = User.find(params[:user_id])
   	else 
   	  @user = current_user
   	end
