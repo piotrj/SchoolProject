@@ -10,8 +10,12 @@ ActionController::Routing::Routes.draw do |map|
   	user.resources :categories
   end
   map.resources :school_tests
-  map.resources :categories
-  map.resources :questions
+  map.resources :categories do |category|
+    category.resources :questions
+  end
+  
+  map.resources :question, :except => [:new, :create]
+
 
   # Sample of regular route:
   #   map.connect 'products/:id', :controller => 'catalog', :action => 'view'
