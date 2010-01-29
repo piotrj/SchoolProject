@@ -1,0 +1,9 @@
+-form_for [@category, question] do |f|
+  %p
+    = f.error_messages
+
+  %p
+    = f.label :text
+    = f.text_field :text
+  %p
+    = f.submit 'Create'
