@@ -1,0 +1,5 @@
+#flash_messages
+  - [:notice, :error].each do |severity|
+    - if has_flash?(severity)
+      .flash{:id => severity}
+        %p= get_flash(severity)

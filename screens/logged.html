@@ -140,6 +140,18 @@
         background-color: #D3D3D3;
       }
       
+      div.flash {
+        border: 1px solid;
+        margin-bottom: 5px;
+        padding-left: 10px;
+      }
+      div#error {
+        border-color: #FF6D6D;
+      }
+      div#notice {
+        border-color: #90FF6E;
+      }
+      
     </style>
   </head>
   <body>
@@ -158,6 +170,14 @@
         </div>
       </div>
       <div id="content">
+        <div id="flash_messages">
+          <div id="notice" class="flash">
+            <p>Test was successfully created.</p>
+          </div>
+          <div id="error" class="flash">
+            <p>This is an error</p>
+          </div>
+        </div>
         <h1>Tests</h1>
         <ul class="actions">
           <li><a href="#">Add Test</a></li>

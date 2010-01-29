@@ -20,11 +20,15 @@ class SchoolTestsController < ApplicationController
   	respond_to do |format|
       if @test.save
         flash[:notice] = 'Test was successfully created.'
-        format.html { redirect_to root_url }
+        format.html { redirect_to school_tests_path }
       else
       	flash[:error] = 'Test was not created.'
-        format.html { redirect_to root_url }
+        format.html { redirect_to school_tests_path }
       end
     end
+  end
+  
+  def edit
+    
   end
 end

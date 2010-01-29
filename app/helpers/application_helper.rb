@@ -7,4 +7,12 @@ module ApplicationHelper
       root.add "Users", users_path if current_user.admin?
     end
   end
+  
+  def has_flash?(severity)
+    flash && !flash[severity].blank?
+  end
+  
+  def get_flash(severity)
+    flash[severity]
+  end
 end

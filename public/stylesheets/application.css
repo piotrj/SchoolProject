@@ -125,3 +125,15 @@ ul.actions li {
 ul.actions li:hover {
   background-color: #D3D3D3;
 }
+
+div.flash {
+  border: 1px solid;
+  margin-bottom: 5px;
+  padding-left: 10px;
+}
+div#error {
+  border-color: #FF6D6D;
+}
+div#notice {
+  border-color: #90FF6E;
+}
