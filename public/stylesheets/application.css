@@ -2,6 +2,10 @@ body {
   font-family: "Helvetica Neue", Arial, Helvetica, sans-serif;
   color: #414141;
 }
+
+ul li {
+  margin-bottom: 5px;
+}
 #container {
   width: 1000px;
   margin: 0 auto;
@@ -26,6 +30,7 @@ ul.menu {
 ul.menu li{
   display: inline-block;
   text-align: center;
+  margin-bottom: 0;
 }
 
 ul.menu li a, ul#menu span {
@@ -136,4 +141,41 @@ div#error {
 }
 div#notice {
   border-color: #90FF6E;
+}
+
+div#errorExplanation {
+  width: 500px;
+  border: #FF6D6D 1px solid;
+  margin-bottom: 5px;
+  padding-left: 10px;  
+  font-size: 12px;  
+}
+
+div#errorExplanation h2 {
+  display: none;
+}
+
+label {
+  display: inline-block;
+  width: 120px;
+}
+
+.categories_fields ul{
+  list-style: none;
+}
+
+.categories_fields input {
+  width: 30px;
+}
+
+dl.categories_list dt{
+  width: 120px;
+  margin-bottom: 5px;
+  display: inline-block;
+  float: left;
+  clear: both;
+}
+dl.categories_list dd {
+  display: inline-block;
+  float: left;
 }

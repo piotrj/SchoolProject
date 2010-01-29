@@ -152,6 +152,31 @@
         border-color: #90FF6E;
       }
       
+      div#errorExplanation {
+        width: 500px;
+        border: #FF6D6D 1px solid;
+        margin-bottom: 5px;
+        padding-left: 10px;  
+        font-size: 12px;  
+      }
+      
+      div#errorExplanation h2 {
+        display: none;
+      }
+      
+      .categories_fields ul{
+        list-style: none;
+      }
+      
+      .categories_fields input {
+        width: 30px;
+      }
+      
+      label {
+        display: inline-block;
+        width: 120px;
+      }
+      
     </style>
   </head>
   <body>
@@ -182,6 +207,44 @@
         <ul class="actions">
           <li><a href="#">Add Test</a></li>
         </ul>
+        <form>
+          <div id="errorExplanation" class="errorExplanation">
+            <h2>Try Again</h2>
+            <ul>
+              <li>Name has already been taken</li>
+            </ul>
+          </div>
+          <p>
+            <span class="field-with-errors"><label for="school_test_name">Name</label></span>
+            <span class="field-with-errors"><input type="text" value="Test" size="30" name="school_test[name]" id="school_test_name"></span>
+          </p>
+          
+          <div class="categories_fields">
+            <h2>Categories</h2>
+            <ul>
+              <li>
+                <label for="school_test_name">Category 1</label>
+                <input type="text" value="Test" size="30" name="school_test[name]" id="school_test_name">
+              </li>
+              <li>
+                <label for="school_test_name">Category 2</label>
+                <input type="text" value="Test" size="30" name="school_test[name]" id="school_test_name">
+              </li>
+              <li>
+                <label for="school_test_name">Category 3</label>
+                <input type="text" value="Test" size="30" name="school_test[name]" id="school_test_name">
+              </li>
+              <li>
+                <label for="school_test_name">Category 4</label>
+                <input type="text" value="Test" size="30" name="school_test[name]" id="school_test_name">
+              </li>
+            </ul>
+          
+          </div>
+          <p>
+            <input type="submit" value="Create" name="commit" id="school_test_submit">
+          </p>
+        </form>
         <ul class="items_list">
           <li>Test 1</li>
           <li>Test 2 2 2</li>

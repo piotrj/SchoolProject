@@ -6,5 +6,5 @@
 %ul
   - @tests.each do |test|
     %li
-      =h test.name
+      =link_to h(test.name), school_test_path(test)
 

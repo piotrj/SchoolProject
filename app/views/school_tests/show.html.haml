@@ -1,0 +1,13 @@
+%h1
+  = h @test.name
+%ul.actions
+  %li
+    =link_to "Edit Test", edit_school_test_path(@test)
+%h2 
+  Categories
+%dl.categories_list
+  - @test.test_categories.each do |test_category|
+    %dt
+      =h test_category.category.name
+    %dd
+      =h test_category.number

@@ -1,9 +1,19 @@
--form_for(test) do |f|
+- form_for(test) do |f|
   %p
-    = f.error_messages
+    = f.error_messages :header_message => "Try Again", :message => nil 
 
-  %p
+  .input
     = f.label :name
     = f.text_field :name
-  %p
+  
+  .categories_fields
+    %h2
+      Categories
+    %ul
+      - f.fields_for :test_categories do |category_form|
+        %li
+          = category_form.hidden_field :category_id
+          = category_form.label :number, category_form.object.category.name
+          = category_form.text_field :number
+  .input
     = f.submit 'Create'
