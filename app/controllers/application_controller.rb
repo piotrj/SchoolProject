@@ -20,6 +20,11 @@ class ApplicationController < ActionController::Base
     send_unauthorized if current_user.nil?
   end
   
+  def require_owner
+    model =  controller_name.singularize.camelize.constantize
+    send_unauthorized("Changed object is not owned by current user") unless model.find(params[:id]).owned_by?(current_user)
+  end
+  
   def send_unauthorized(message = "Unauthorized access")
     #TODO: create custom Exception for unauthorized access
     raise message

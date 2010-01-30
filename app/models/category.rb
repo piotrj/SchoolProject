@@ -1,4 +1,6 @@
 class Category < ActiveRecord::Base
+  include Owned
+  
 	belongs_to :user
 	has_many :questions
 	has_many :test_categories
