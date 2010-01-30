@@ -2,9 +2,9 @@
 module ApplicationHelper
   def generate_nav()
     semantic_menu do |root|
-      root.add "Tests", school_tests_path
-      root.add "Categories", categories_path
-      root.add "Users", users_path if current_user.admin?
+      root.add t("navigation.tests"), school_tests_path
+      root.add t("navigation.categories"), categories_path
+      root.add t("navigation.users"), users_path if current_user.admin?
     end
   end
   

@@ -38,7 +38,7 @@ ul.menu li a, ul#menu span {
   padding-top: 14px;
   padding-bottom: 4px;
   color: #414141;
-  width: 80px;
+  width: 110px;
   text-decoration: none;
 }
 
@@ -168,6 +168,9 @@ label {
   width: 30px;
 }
 
+.categories_fields label {
+  width: 400px;
+}
 dl.categories_list dt{
   width: 120px;
   margin-bottom: 5px;

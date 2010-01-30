@@ -29,10 +29,10 @@ class SchoolTestsController < ApplicationController
   	@test.user=current_user
   	respond_to do |format|
       if @test.save
-        flash[:notice] = 'Test was successfully created.'
+        flash[:notice] = t "flash.test.create.success"
         format.html { redirect_to school_tests_path }
       else
-      	flash[:error] = 'Test was not created.'
+      	flash[:error] = t "flash.test.create.fail"
         format.html { render :action => "new"}
       end
     end
@@ -46,10 +46,10 @@ class SchoolTestsController < ApplicationController
     @test = SchoolTest.find(params[:id])
     respond_to do |format|
       if @test.update_attributes(params[:school_test])
-        flash[:notice] = 'Test was successfully updated.'
+        flash[:notice] = t "flash.test.update.success"
         format.html { redirect_to school_tests_path }
       else
-      	flash[:error] = 'Test was not updated.'
+      	flash[:error] = t "flash.test.update.fail"
         format.html { render :action => "edit"}
       end
     end

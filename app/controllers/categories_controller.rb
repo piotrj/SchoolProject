@@ -18,10 +18,10 @@ class CategoriesController < ApplicationController
   	@category.user=current_user
   	respond_to do |format|
       if @category.save
-        flash[:notice] = 'Category was successfully created.'
+        flash[:notice] = t "flash.category.create.success"
         format.html { redirect_to categories_path }
       else
-      	flash[:error] = 'Category was not created.'
+      	flash[:error] = t "flash.category.create.fail"
         format.html { redirect_to url_for categories_path }
       end
     end
@@ -39,10 +39,10 @@ class CategoriesController < ApplicationController
     @category = Category.find(params[:id])
   	respond_to do |format|
       if @category.update_attributes(params[:category])
-        flash[:notice] = 'Category was successfully updated.'
+        flash[:notice] = t "flash.category.update.success"
         format.html { redirect_to category_path(@category) }
       else
-      	flash[:error] = 'Category was not updated.'
+      	flash[:error] = t "flash.category.update.fail"
         format.html { redirect_to url_for category_path(@category) }
       end
     end

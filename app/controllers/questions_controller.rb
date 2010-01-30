@@ -17,10 +17,10 @@ class QuestionsController < ApplicationController
   	@question.category = Category.find(params[:category_id])
   	respond_to do |format|
       if @question.save
-        flash[:notice] = 'Question was successfully created.'
+        flash[:notice] = t "flash.question.create.success"
         format.html { redirect_to category_path(@question.category) }
       else
-      	flash[:error] = 'Question was not created.'
+      	flash[:error] = t "flash.question.create.fail"
         format.html { render :action => 'new' }
       end
     end

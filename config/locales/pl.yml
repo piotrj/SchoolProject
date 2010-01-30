@@ -1,0 +1,59 @@
+pl:
+  authlogic:
+    error_messages:
+      login_blank: nie może być pusty
+      login_not_found: jest nieprawidłowy
+      login_invalid: może zawierać tylko litery, liczby, spacje oraz znaki .-_@
+      consecutive_failed_logins_limit_exceeded: Przekroczono ilość nieprawidłowych logowań, konto zablokowane.
+      email_invalid: powinien mieć poprawny format
+      password_blank: nie może być puste
+      password_invalid: jest nieprawidłowe
+      not_active: Konto jest nieaktywne
+      not_confirmed: Konto jest nieaktywne
+      not_approved: Konto nie zostało zatwierdzone
+      no_authentication_details: Nie podałeś żadnych danych
+    models:
+      user_session: UserSession
+    attributes:
+      user_session:
+        login: login
+        email: email
+        password: hasło
+        remember_me: zapamiętaj mnie
+  activerecord:
+    errors:
+      template:
+        body: Wystąpiły następujące błędy
+      models:
+        
+  flash:
+    login:
+      success: "Logowanie pomyślne"
+      fail: "Logowanie nieudane"
+    logout:
+      success: "Wylogowanie pomyślne"
+    category:
+      create:
+        success: "Kategoria stworzona pomyślnie"
+        fail: "Kategoria nie została stworzona"
+      update:
+        success: "Kategoria została zaktualizowana"
+        fail: "Kategoria nie została zaktualizowana"
+    test:
+      create:
+        success: "Test stworzony pomyślnie"
+        fail: "Test nie został stworzony"
+      update:
+        success: "Test został zaktualizowany"
+        fail: "Test nie został zaktualizowany"
+    question:
+      create:
+        success: "Pytanie stworzone pomyślnie"
+        fail: "Pytanie nie zostało stworzone"
+      update:
+        success: "Pytanie zostało zaktualizowane"
+        fail: "Pytanie nie zostało zaktualizowane"
+  navigation:
+    tests: "Testy"
+    categories: "Kategorie"
+    users: "Użytkownicy"
