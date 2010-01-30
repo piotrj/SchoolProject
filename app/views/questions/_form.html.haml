@@ -1,9 +1,20 @@
--form_for [@category, question] do |f|
+-form_for [question.category, question] do |f|
   %p
     = f.error_messages
 
   %p
+    = f.hidden_field :category_id
     = f.label :Tekst
     = f.text_field :text
+    
+  %h2 
+    = t "answers"
+  %ol
+    - f.fields_for :answers do |answer_form|
+      %li
+        = answer_form.text_field :text
+        = answer_form.check_box :correct
+        = answer_form.label :correct, t("answer.correct")
+    
   %p
     = f.submit 'Wyślij'

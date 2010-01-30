@@ -1,4 +1,10 @@
 pl:
+  answers: Odpowiedzi
+  answer:
+    correct: Poprawna
+  question:
+    errors:
+      no_correct: Pytanie nie ma poprawnej odpowiedzi
   authlogic:
     error_messages:
       login_blank: nie może być pusty
@@ -21,10 +27,19 @@ pl:
         password: hasło
         remember_me: zapamiętaj mnie
   activerecord:
+    models: 
+      answer: Odpowiedź
+      answers: Odpowiedzi
+    attributes:
+      text: tekst
     errors:
       template:
         body: Wystąpiły następujące błędy
       models:
+        answer:
+          attributes:
+            answers_text:
+              blank: Treść odpowiedzinie może być pusta
         
   flash:
     login:

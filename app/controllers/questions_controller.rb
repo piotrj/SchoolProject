@@ -8,13 +8,18 @@ class QuestionsController < ApplicationController
   end
   
   def new
+    logger.debug "In new"
     @question = Question.new
     @category = Category.find(params[:category_id])
+    @question.category = @category
+    
+    4.times do
+      @question.answers.build
+    end
   end
   
   def create  	
   	@question=Question.create(params[:question])
-  	@question.category = Category.find(params[:category_id])
   	respond_to do |format|
       if @question.save
         flash[:notice] = t "flash.question.create.success"
