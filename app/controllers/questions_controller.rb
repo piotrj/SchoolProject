@@ -1,5 +1,4 @@
-class QuestionsController < ApplicationController
-	
+class QuestionsController < ResourceAccessController
 	def index
     if params[:category_id]
   		@category = Category.find(params[:category_id])
@@ -8,7 +7,6 @@ class QuestionsController < ApplicationController
   end
   
   def new
-    logger.debug "In new"
     @question = Question.new
     @category = Category.find(params[:category_id])
     @question.category = @category
@@ -31,4 +29,24 @@ class QuestionsController < ApplicationController
     end
   end
   
+  def edit
+    @question = Question.find(params[:id])
+  end
+  
+  def update
+    @question = Question.find(params[:id])
+    respond_to do |format|
+      if @question.update_attributes(params[:question])
+        flash[:notice] = t "flash.question.update.success"
+        format.html { redirect_to question_path }
+      else
+      	flash[:error] = t "flash.question.update.fail"
+        format.html { render :action => "edit"}
+      end
+    end
+  end
+  
+  def show
+    @question = Question.find(params[:id])
+  end
 end

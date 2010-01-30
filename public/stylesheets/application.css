@@ -182,3 +182,7 @@ dl.categories_list dd {
   display: inline-block;
   float: left;
 }
+
+li.correct {
+  color: #90FF6E;
+}

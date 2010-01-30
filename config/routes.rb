@@ -17,7 +17,7 @@ ActionController::Routing::Routes.draw do |map|
     category.resources :questions
   end
   
-  map.resources :question, :except => [:new, :create] do |question|
+  map.resources :questions, :except => [:new, :create] do |question|
     question.resources :answers
   end
 

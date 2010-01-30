@@ -13,5 +13,5 @@
 %ul
   - @category.questions.each do |question|
     %li
-      =h question.text
+      = link_to h(question.text), question_path(question)
 

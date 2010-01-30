@@ -1,0 +1,11 @@
+%h1
+  = h @question.text
+%ul.actions
+  %li
+    =link_to "Edytuj pytanie", edit_question_path(@question)
+%h2 
+  Odpowiedzi
+%ul
+  - @question.answers.each do |answer|
+    %li{:class => answer.correct ? "correct" : ""}
+      = h answer.text

@@ -1,6 +1,4 @@
-class CategoriesController < ApplicationController
-	before_filter :require_user, :only => [:new, :create, :index]
-	before_filter :require_owner, :only => [:edit, :update]
+class CategoriesController < ResourceAccessController
 	def index
     if params[:user_id]
   		@user = User.find(params[:user_id])

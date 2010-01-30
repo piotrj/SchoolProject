@@ -6,7 +6,7 @@ class Question < ActiveRecord::Base
     
     accepts_nested_attributes_for :answers
     
-    delegate :user, :to => :category
+    delegate :owned_by?, :to => :category
     
     def has_correct_answer
       correct_no = 0
