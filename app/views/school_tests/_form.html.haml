@@ -3,17 +3,17 @@
     = f.error_messages :header_message => "Try Again", :message => nil 
 
   .input
-    = f.label :name
+    = f.label :Nazwa
     = f.text_field :name
   
   .categories_fields
     %h2
-      Categories
+      Kateogrie
     %ul
       - f.fields_for :test_categories do |category_form|
         %li
           = category_form.hidden_field :category_id
-          = category_form.label :number, category_form.object.category.name
+          = category_form.label :Liczba, category_form.object.category.name
           = category_form.text_field :number
   .input
-    = f.submit 'Create'
+    = f.submit 'Wyślij'

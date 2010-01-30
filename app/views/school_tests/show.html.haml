@@ -2,9 +2,9 @@
   = h @test.name
 %ul.actions
   %li
-    =link_to "Edit Test", edit_school_test_path(@test)
+    =link_to "Edytuj test", edit_school_test_path(@test)
 %h2 
-  Categories
+  Kategorie
 %dl.categories_list
   - @test.test_categories.each do |test_category|
     %dt

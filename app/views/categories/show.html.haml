@@ -3,12 +3,12 @@
 
 %ul.actions
   %li
-    =link_to "Add Question", new_category_question_path(@category)
+    =link_to "Dodaj pytanie", new_category_question_path(@category)
   %li
-    =link_to "Edit Category", edit_category_path(@category)
+    =link_to "Edytuj kategorię", edit_category_path(@category)
 
 %h2
-  Questions listing
+  Lista pytań
 
 %ul
   - @category.questions.each do |question|
