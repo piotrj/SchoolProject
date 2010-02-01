@@ -13,6 +13,10 @@
   .input
     = f.label :password_confirmation, "Powtórz Hasło"
     = f.password_field :password_confirmation
+  
+  .input
+    = f.label "Data"
+    = datetime_select("school_test", "expiry_date")
   .categories_fields
     %h2
       Kateogrie
