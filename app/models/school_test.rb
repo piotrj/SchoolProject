@@ -8,9 +8,11 @@ class SchoolTest < ActiveRecord::Base
   
 	belongs_to :user
 	has_many :test_categories
+	has_one :grade_scale
 	
 	validates_uniqueness_of :name
 	accepts_nested_attributes_for :test_categories
+	accepts_nested_attributes_for :grade_scale
 	
 	def active?
 	  Time.now <= expiry_date
