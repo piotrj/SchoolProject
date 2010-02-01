@@ -13,6 +13,9 @@ ActionController::Routing::Routes.draw do |map|
   end
   
   map.resources :school_tests
+  map.resources :school_test_sessions, :only => [:new, :create]
+  
+  map.resources :student_answers
   
   map.resources :categories do |category|
     category.resources :questions

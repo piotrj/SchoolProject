@@ -11,7 +11,8 @@ class ApplicationController < ActionController::Base
 
   # Scrub sensitive parameters from your log
   filter_parameter_logging :password
-  
+
+  private
   def set_locale
     I18n.locale = "pl"
   end
@@ -24,13 +25,11 @@ class ApplicationController < ActionController::Base
     model =  controller_name.singularize.camelize.constantize
     send_unauthorized("Changed object is not owned by current user") unless model.find(params[:id]).owned_by?(current_user)
   end
-  
+
   def send_unauthorized(message = "Unauthorized access")
     #TODO: create custom Exception for unauthorized access
     raise message
   end
-  
-  private
 
   def current_user_session
     return @current_user_session if defined?(@current_user_session)
