@@ -1,14 +1,19 @@
 class UsersController < ApplicationController
+
+	def index
+		@users = User.all
+  end
+  
   def new
     @user = User.new
   end
   
   def create
-    @user = User.new(params[:user])
-    if @user.save
-      flash[:notice] = "Successfully created user."
+    if User.create_teacher(params[:user][:email])
+      flash[:notice] = "Użytkownik utworzony pomyślnie."
       redirect_to root_url
     else
+    	flash[:error] = "Nie udało się utworzyć użytkownika."
       render :action => 'new'
     end
   end
