@@ -1,0 +1,25 @@
+%h1
+  =h @user.name
+  =h @user.lastname
+
+%ul.actions
+  %li
+    =link_to "Edytuj użytkownika", edit_user_path(@user)
+  %li
+    =link_to "Zobacz testy", school_tests_path(:user_id => @user.id)
+  %li
+    =link_to "Zobacz kategorie", categories_path(:user_id => @user.id)  
+
+%p
+  Email:
+  %b
+    =h @user.email
+%p
+  Tytuł:
+  %b
+    =h @user.title
+%p
+  Jednostka organizacyjna:
+  %b
+    =h @user.department
+
