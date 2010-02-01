@@ -6,7 +6,8 @@ ActionController::Routing::Routes.draw do |map|
   
   map.resources :user_sessions
   
-  map.resources :users do |user|
+  map.resources :users, :collection => {:reset_password => :get,
+  																			:reset_pass_submit => :get} do |user|
   	user.resources :school_tests
   	user.resources :categories
   end

@@ -26,6 +26,21 @@ class UsersController < ApplicationController
     @user = User.find(params[:id])
   end
   
+  def reset_password
+  	@user = User.new
+  end
+  
+  def reset_pass_submit
+  	if User.reset_password(params[:user][:email])
+  		flash[:notice] = "Nowe hasło zostało wysłane."
+      redirect_to login_path
+    else
+      @user = User.new
+    	flash[:error] = "Nie udało się wprowadzić zmian, sprawdź poprawność adresu."
+      render :action => 'reset_password'
+    end
+  end
+  
   def update
     @user = User.find(params[:id])
     if @user.update_attributes(params[:user].merge(:first_login => false))
@@ -36,5 +51,4 @@ class UsersController < ApplicationController
       render :action => 'edit'
     end
   end
-
 end

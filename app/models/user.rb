@@ -29,5 +29,14 @@ class User < ActiveRecord::Base
     rand(999_999_999).to_s(32)
   end
   
+  def self.reset_password(email)
+  	password = generate_password
+  	user = User.find_by_email(email)
+  	updated = user.update_attributes(:password => password, :password_confirmation => password) if user
+  	UserSession.find.destroy
+  	UserMailer.deliver_password(email, password) if updated
+  	updated
+  end
+  
   private_class_method :get_teacher_role, :get_admin_role, :generate_password
 end
