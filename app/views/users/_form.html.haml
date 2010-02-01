@@ -5,4 +5,28 @@
     = f.text_field :email 
   
   %p
+    = f.label :Hasło 
+    = f.password_field :password
+    
+  %p
+    = f.label "Potwierdzenie hasła" 
+    = f.password_field :password_confirmation
+    
+  %p
+    = f.label :Imię 
+    = f.text_field :name  
+    
+  %p
+    = f.label :Nazwisko 
+    = f.text_field :lastname
+   
+  %p
+    = f.label :Tytuł 
+    = f.text_field :title
+    
+  %p
+    = f.label "Jednostka organizacyjna" 
+    = f.text_field :department
+  
+  %p
     = f.submit "Submit" 

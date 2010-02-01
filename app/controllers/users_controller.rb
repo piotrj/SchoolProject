@@ -18,16 +18,21 @@ class UsersController < ApplicationController
     end
   end
   
+  def show
+  	@user = User.find(params[:id])
+  end
+  
   def edit
-    @user = current_user
+    @user = User.find(params[:id])
   end
   
   def update
-    @user = current_user
-    if @user.update_attributes(params[:user])
-      flash[:notice] = "Successfully updated user."
+    @user = User.find(params[:id])
+    if @user.update_attributes(params[:user].merge(:first_login => false))
+      flash[:notice] = "Zmiana zakończona pomyślnie."
       redirect_to root_url
     else
+      flash[:error] = "Nie udało się wprowadzić zmian."
       render :action => 'edit'
     end
   end
