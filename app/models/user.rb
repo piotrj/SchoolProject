@@ -14,7 +14,7 @@ class User < ActiveRecord::Base
   end
   
   def admin?() 
-    user_role.name = "admin"
+    user_role.name == "admin"
   end
   
   def self.get_teacher_role()

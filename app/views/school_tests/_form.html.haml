@@ -6,6 +6,13 @@
     = f.label :Nazwa
     = f.text_field :name
   
+  .input
+    = f.label :password, "Hasło"
+    = f.password_field :password
+  
+  .input
+    = f.label :password_confirmation, "Powtórz Hasło"
+    = f.password_field :password_confirmation
   .categories_fields
     %h2
       Kateogrie

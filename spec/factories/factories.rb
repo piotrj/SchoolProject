@@ -10,8 +10,11 @@ Factory.define(:user) do |user|
 end
 
 Factory.define(:school_test) do |school_test|
-  school_test.name  "Test"
+  school_test.name  "test"
   school_test.association :user
+  school_test.password "secret"
+  school_test.password_confirmation "secret"
+  school_test.expiry_date (Time.now + 5.hours)
 end
 
 Factory.define(:question) do |question|

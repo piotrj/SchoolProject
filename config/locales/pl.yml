@@ -5,6 +5,9 @@ pl:
   question:
     errors:
       no_correct: Pytanie nie ma poprawnej odpowiedzi
+  school_test_session:
+    errors:
+      expired: Test jest nieaktywny
   authlogic:
     error_messages:
       login_blank: nie może być pusty

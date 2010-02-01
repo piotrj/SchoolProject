@@ -1,7 +1,6 @@
 require 'spec_helper'
 
 describe SchoolTestsController do
-  
   describe "if not logged in" do 
     it "GET index should not allow to access" do
       lambda { get :index}.should raise_error("Unauthorized access")
@@ -38,14 +37,11 @@ describe SchoolTestsController do
     
     describe "POST create" do
       before do
-        @test = mock_model(SchoolTest)
+        @test = Factory.attributes_for(:school_test)
       end
       describe "if save successed" do
-        before do
-          @test.stub!(:save).and_return(true)
-        end
         it "should redirect to tests listing" do
-          post :create 
+          post :create, :school_test => @test
           response.should redirect_to(school_tests_path)
         end
       end
