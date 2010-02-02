@@ -22,4 +22,12 @@ class StudentAnswer < ActiveRecord::Base
       end
     end
   end
+  
+  def score
+    score = 0
+    student_question_answers.each do |answer|
+      score += 1 if answer.correct?
+    end
+    score
+  end
 end

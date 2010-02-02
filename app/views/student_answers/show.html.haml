@@ -22,7 +22,12 @@
     IP
   %dd
     = @answer.ip
-
+  %dt
+    Ilość punktów
+  %dd
+    = @answer.score
+    \/
+    = @answer.school_test.max_score
 
 %ul
 - @answer.student_question_answers.each do |question|

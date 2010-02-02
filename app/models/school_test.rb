@@ -1,6 +1,5 @@
 class SchoolTest < ActiveRecord::Base
   include Owned
-  # acts_as_authentic
   acts_as_authentic do |c|
     c.maintain_sessions(false)
     c.login_field(:name)
@@ -18,5 +17,9 @@ class SchoolTest < ActiveRecord::Base
 	
 	def active?
 	  Time.now <= expiry_date
+	end
+	
+	def max_score
+    test_categories.sum("number")
 	end
 end

@@ -12,5 +12,14 @@ class StudentQuestionAnswer < ActiveRecord::Base
       chosen_answers.build(:answer => answer)
     end
   end
+  
+  def correct?
+    is_correct = true
+    chosen_answers.each do |chosen_answer|
+      is_correct = is_correct && chosen_answer.answer.correct
+    end
+    
+    is_correct && (chosen_answers.count == question.answers.only_correct.count)
+  end
 end
   
