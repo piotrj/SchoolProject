@@ -7,8 +7,8 @@ class SchoolTest < ActiveRecord::Base
   end
   
 	belongs_to :user
-	has_many :test_categories
-	has_one :grade_scale
+	has_many :test_categories, :dependent => :destroy
+	has_one :grade_scale, :dependent => :destroy
 	
 	validates_uniqueness_of :name
 	accepts_nested_attributes_for :test_categories

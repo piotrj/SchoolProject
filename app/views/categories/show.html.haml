@@ -6,6 +6,9 @@
     =link_to "Dodaj pytanie", new_category_question_path(@category)
   %li
     =link_to "Edytuj kategorię", edit_category_path(@category)
+  - if @category.owned_by?(current_user)  
+    %li
+      =link_to "Usuń kategorię", category_path(@category), :method => :delete, :confirm => 'Are you sure?'
 
 %h2
   Lista pytań
