@@ -1,6 +1,6 @@
 class Question < ActiveRecord::Base
     belongs_to :category
-    has_many :answers
+    has_many :answers, :dependent => :destroy
     
     validate :has_correct_answer
     

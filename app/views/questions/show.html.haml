@@ -3,6 +3,8 @@
 %ul.actions
   %li
     =link_to "Edytuj pytanie", edit_question_path(@question)
+  %li
+    =link_to "Usuń pytanie", question_path(@question), :method => :delete, :confirm => 'Czy chcesz usunąć pytanie?'
 %h2 
   Odpowiedzi
 %ul

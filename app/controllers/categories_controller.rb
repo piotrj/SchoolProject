@@ -48,9 +48,13 @@ class CategoriesController < ResourceAccessController
   end
   
   def destroy
-  	@category = SchoolTest.find(params[:id])
+  	@category = Category.find(params[:id])
     @category.destroy
     flash[:notice] = "Kategoria została usunięta pomyślnie"
-    redirect_to categories_path
+    if params[:user_id]
+    	redirect_to user_categories_path(params[:user_id])
+    else
+    	redirect_to categories_path
+    end 
   end
 end
