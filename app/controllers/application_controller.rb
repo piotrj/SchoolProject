@@ -23,7 +23,7 @@ class ApplicationController < ActionController::Base
   
   def require_owner
     model =  controller_name.singularize.camelize.constantize
-    send_unauthorized("Changed object is not owned by current user") unless model.find(params[:id]).owned_by?(current_user)
+    send_unauthorized("Object is not owned by current user") unless (model.find(params[:id]).owned_by?(current_user) && current_user.role.name == "admin")
   end
 
   def send_unauthorized(message = "Unauthorized access")
@@ -39,5 +39,15 @@ class ApplicationController < ActionController::Base
   def current_user
     return @current_user if defined?(@current_user)
     @current_user = current_user_session && current_user_session.record
+  end
+  
+  def current_test_session
+    return @current_test_session if defined?(@current_test_session)
+    @current_test_session = SchoolTestSession.find
+  end
+
+  def current_test
+    return @current_test if defined?(@current_test)
+    @current_test = current_test_session && current_test_session.record
   end
 end
