@@ -206,3 +206,20 @@ ol.answer_list li.correct span.question_text{
 ol.answer_list li.incorrect span.question_text{
   color: #FF6D6D;
 }
+
+#counter {
+  position:fixed;
+  bottom: 10px;
+  right: 10px;
+  width: 60px;
+}
+
+#minutes, #separator, #seconds {
+  display: inline-block;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+#minutes, #seconds {
+  text-align: center;
+}

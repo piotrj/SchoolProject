@@ -17,6 +17,10 @@
   %p
     = f.label "expiry_date", "Data wygaśnięcia hasła"
     = datetime_select("school_test", "expiry_date")
+    
+  %p
+    = f.label :minutes, "Czas trwania testu(w minutach)"
+    = f.text_field :minutes
   
   .grade_scale_fields
     %h2
