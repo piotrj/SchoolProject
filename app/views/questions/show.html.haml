@@ -7,7 +7,7 @@
     =link_to "Usuń pytanie", question_path(@question), :method => :delete, :confirm => 'Czy chcesz usunąć pytanie?'
 %h2 
   Odpowiedzi
-%ul
+%ul.question_answers_list
   - @question.answers.each do |answer|
     %li{:class => answer.correct ? "correct" : ""}
       = h answer.text

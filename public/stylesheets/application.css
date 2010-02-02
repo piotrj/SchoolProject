@@ -175,18 +175,34 @@ label {
 .categories_fields label {
   width: 400px;
 }
-dl.categories_list dt{
+
+.categories_fields .field-with-errors input {
+  background-color: #FF6D6D;
+}
+dl dt{
   width: 120px;
   margin-bottom: 5px;
   display: inline-block;
   float: left;
-  clear: both;
+  clear: left;
 }
-dl.categories_list dd {
+dl dd {
   display: inline-block;
   float: left;
 }
 
-li.correct {
+ul.question_answers_list li.correct {
   color: #90FF6E;
+}
+
+.answer_list{
+  clear: left;
+}
+
+ol.answer_list li.correct span.question_text{
+  color: #90FF6E;
+}
+
+ol.answer_list li.incorrect span.question_text{
+  color: #FF6D6D;
 }
