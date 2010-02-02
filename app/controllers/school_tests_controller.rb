@@ -19,8 +19,6 @@ class SchoolTestsController < ResourceAccessController
     Category.for_user(current_user).each do |category|
       @test.test_categories.build(:category => category, :school_test => @test)
     end
-    
-    logger.debug @test.test_categories.inspect
   end
   
   def create  	

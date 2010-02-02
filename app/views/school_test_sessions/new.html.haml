@@ -1,0 +1,11 @@
+- form_for @test_session do |f|
+  %p
+    = f.error_messages
+  %p
+    = f.label :name, "Nazwa testu"
+    = f.text_field :name
+  %p
+    = f.label :password, "Hasło"
+    = f.password_field :password
+  %p
+    = f.submit "Zaloguj"

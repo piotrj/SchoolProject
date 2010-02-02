@@ -1,0 +1,17 @@
+- form_for (@answer) do |f|
+  = f.hidden_field :ip
+  = f.hidden_field :school_test_id
+  %p
+    = f.label :first_name, "Imię"
+    = f.text_field :first_name
+  %p
+    = f.label :last_name, "Nazwisko"
+    = f.text_field :last_name
+  %p
+    = f.label :student_number, "Numer indeksu"
+    = f.text_field :student_number
+  %p
+    = f.label :group_number, "Numer grupy"
+    = f.text_field :group_number
+  %p
+    = f.submit "Rozpocznij test", :confirm => "Czy na pewno chcesz rozpocząć test?"

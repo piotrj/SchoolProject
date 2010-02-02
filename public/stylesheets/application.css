@@ -15,6 +15,10 @@ ul li {
   padding: 0 20px;
 }
 
+#header #logo a {
+  color: #414141;
+  text-decoration: none;
+}
 #user_nav {
   float: right;
   font-size: 12px;

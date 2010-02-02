@@ -9,7 +9,7 @@ class SchoolTestSessionsController < ApplicationController
       flash[:notice] = t("flash.test_login.success")
       redirect_to new_student_answer_path
     else
-      flash[:notice] = t("flash.test_login.fail")
+      flash[:error] = t("flash.test_login.fail")
       render :action => :new
     end
   end

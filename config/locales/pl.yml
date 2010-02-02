@@ -19,7 +19,7 @@ pl:
       email_invalid: powinien mieć poprawny format
       password_blank: nie może być puste
       password_invalid: jest nieprawidłowe
-      not_active: Konto jest nieaktywne
+      not_active: Test jest nieaktywny
       not_confirmed: Konto jest nieaktywne
       not_approved: Konto nie zostało zatwierdzone
       no_authentication_details: Nie podałeś żadnych danych
@@ -94,6 +94,13 @@ pl:
       update:
         success: "Pytanie zostało zaktualizowane"
         fail: "Pytanie nie zostało zaktualizowane"
+    test_login:
+      success: "Pomyślne logowanie do testu"
+      fail: "Nieudane logowanie do testu"
+    student_answer:
+      create: 
+        success: "Test rozpoczęty"
+        fail: "Błąd przy rozpoczynaniu testu"
   navigation:
     tests: "Testy"
     categories: "Kategorie"

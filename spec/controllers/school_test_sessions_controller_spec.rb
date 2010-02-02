@@ -5,6 +5,7 @@ describe SchoolTestSessionsController do
     it "should be successful" do
       get :new
       response.should be_success
+      response.should render_template(:new)
     end
   end
   

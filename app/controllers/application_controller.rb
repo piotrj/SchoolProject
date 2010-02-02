@@ -23,7 +23,11 @@ class ApplicationController < ActionController::Base
   
   def require_owner
     model =  controller_name.singularize.camelize.constantize
-    send_unauthorized("Object is not owned by current user") unless (model.find(params[:id]).owned_by?(current_user) && current_user.role.name == "admin")
+    send_unauthorized("Object is not owned by current user") unless (model.find(params[:id]).owned_by?(current_user) || current_user.admin? == "admin")
+  end
+  
+  def require_admin_to_see_others
+    send_unauthoirzed unless (params[:user_id].nil? or current_user.admin?)
   end
 
   def send_unauthorized(message = "Unauthorized access")
