@@ -15,6 +15,7 @@ class SchoolTestsController < ResourceAccessController
 	
 	def new
     @test = SchoolTest.new
+    @test.build_grade_scale
     Category.for_user(current_user).each do |category|
       @test.test_categories.build(:category => category, :school_test => @test)
     end

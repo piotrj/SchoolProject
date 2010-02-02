@@ -1,0 +1,15 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  five: 9.99
+  four_and_half: 9.99
+  four: 9.99
+  three_and_half: 9.99
+  three: 9.99
+
+two:
+  five: 9.99
+  four_and_half: 9.99
+  four: 9.99
+  three_and_half: 9.99
+  three: 9.99

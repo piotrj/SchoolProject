@@ -17,6 +17,32 @@
   .input
     = f.label "Data"
     = datetime_select("school_test", "expiry_date")
+  
+  .grade_scale_fields
+    %h2
+      Skala ocen
+    %ul
+      - f.fields_for :grade_scale do |scale_form|
+        %li
+          5:
+          = scale_form.text_field :five
+          \%
+        %li
+          4,5:
+          = scale_form.text_field :four_and_half
+          \%
+        %li
+          4:
+          = scale_form.text_field :four
+          \%
+        %li
+          3,5:
+          = scale_form.text_field :three_and_half
+          \%
+        %li
+          3:
+          = scale_form.text_field :three
+          \%
   .categories_fields
     %h2
       Kateogrie
