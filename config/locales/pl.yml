@@ -10,6 +10,9 @@ pl:
   school_test_session:
     errors:
       expired: Test jest nieaktywny
+  test_category:
+    errors:
+      number_to_big: ma za dużo pytań
   authlogic:
     error_messages:
       login_blank: nie może być pusty
@@ -33,11 +36,15 @@ pl:
         password: hasło
         remember_me: zapamiętaj mnie
   activerecord:
-    models: 
-      answer: Odpowiedź
-      answers: Odpowiedzi
     attributes:
       text: tekst
+      number: numer
+      school_test:
+        name: Nazwa testu
+        password: Hasło
+        password_confirmation: Potwierdzenie hasła
+      test_category:
+        number: Numer
     errors:
       messages:
         inclusion: "nie znajduje się na liście dopuszczalnych wartości"
@@ -61,11 +68,12 @@ pl:
         even: "musi być parzyste"
       template:
         body: Wystąpiły następujące błędy    
-      models:
-        answer:
-          attributes:
-            answers_text:
-              blank: Treść odpowiedzinie może być pusta
+    models:
+      answer:
+        attributes:
+          answers_text:
+            blank: Treść odpowiedzinie może być pusta
+
         
   flash:
     login:

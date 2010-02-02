@@ -33,6 +33,7 @@
   %dd
     = @answer.grade
 
+<<<<<<< HEAD:app/views/student_answers/show.html.haml
 %ul
 - @answer.student_question_answers.each do |question|
   %li
@@ -42,3 +43,16 @@
       - question.chosen_answers.each do |chosen_answer|
         %li
           = chosen_answer.text
+=======
+%h2.answer_list
+  Odpowiedzi na pytania
+%ol.answer_list
+  - @answer.student_question_answers.each do |question|
+    %li{:class => question.correct? ? "correct" : "incorrect"}
+      %span.question_text
+        = question.text
+      %ul
+        - question.chosen_answers.each do |chosen_answer|
+          %li
+            = chosen_answer.text
+>>>>>>> 154ff349047839d205764cff3c46340ccf87b879:app/views/student_answers/show.html.haml
