@@ -28,6 +28,10 @@
     = @answer.score
     \/
     = @answer.school_test.max_score
+  %dt
+    Ocena
+  %dd
+    = @answer.grade
 
 %ul
 - @answer.student_question_answers.each do |question|

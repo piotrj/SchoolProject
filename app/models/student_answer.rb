@@ -30,4 +30,14 @@ class StudentAnswer < ActiveRecord::Base
     end
     score
   end
+  
+  def grade
+    grade = 2
+    grade = 3 if ((self.score.to_f/self.school_test.max_score*100)>=self.school_test.grade_scale.three)
+    grade = 3.5 if ((self.score.to_f/self.school_test.max_score*100)>=self.school_test.grade_scale.three_and_half)
+    grade = 4 if ((self.score.to_f/self.school_test.max_score*100)>=self.school_test.grade_scale.four)
+    grade = 4.5 if ((self.score.to_f/self.school_test.max_score*100)>self.school_test.grade_scale.four_and_half)
+    grade = 5 if ((self.score.to_f/self.school_test.max_score*100)>self.school_test.grade_scale.five)
+    grade
+  end
 end
