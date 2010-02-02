@@ -22,11 +22,14 @@ describe StudentAnswersController do
       @test = Factory(:school_test)
       @student_answer = mock_model(StudentAnswer)
       StudentAnswer.stub!(:new => @student_answer)
+      @school_test_session = mock_model(SchoolTestSession)
+      controller.stub!(:current_test_session => @school_test_session)
     end
     
     it "should be success if student is logged to the test" do
       controller.stub!(:current_test => @test)
       @student_answer.should_receive(:save).and_return(true)
+      @school_test_session.should_receive(:answer=).with(@student_answer)
       post :create
       response.should redirect_to(edit_student_answer_path(@student_answer))
     end

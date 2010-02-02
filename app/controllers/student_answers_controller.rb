@@ -12,11 +12,20 @@ class StudentAnswersController < ApplicationController
     if @answer.save
       flash[:notice] = t "flash.student_answer.create.success"
       redirect_to edit_student_answer_path(@answer)
-      current.
+      current_test_session.answer = @answer
     else 
       flash[:error] = t "flash.student_answer.create.fail"
       render :action => :new
     end
+  end
+  
+  def edit
+    @answer = current_test_session.answer
+  end
+  
+  def update
+    @answer = current_test_session.answer
+    
   end
   
   private 
