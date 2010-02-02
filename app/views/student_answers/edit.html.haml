@@ -1,0 +1,18 @@
+- form_for @answer do |f|
+  %p 
+    = f.error_messages
+  %ol
+    - f.fields_for :student_question_answers do |questions_form|
+      = questions_form.hidden_field :question_id
+      %li
+        = questions_form.object.text
+        %ul
+          - questions_form.fields_for :chosen_answers do |chosen_answer_form|
+            = chosen_answer_form.hidden_field :answer_id
+            %li
+              = chosen_answer_form.label :chosen, chosen_answer_form.object.text
+              = chosen_answer_form.check_box :chosen
+      
+  %p
+    = f.submit "Zakończ test"
+  

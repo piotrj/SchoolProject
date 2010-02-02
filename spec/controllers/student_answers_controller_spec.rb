@@ -34,6 +34,7 @@ describe StudentAnswersController do
       response.should redirect_to(edit_student_answer_path(@student_answer))
     end
     
+    
     it "should fail if student is not logged in" do
       controller.stub!(:current_test => nil)
       lambda{post :create}.should raise_error

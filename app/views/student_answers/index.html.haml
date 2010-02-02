@@ -1,0 +1,8 @@
+%h1 
+  Odpowiedzi do testu
+  = @test.name
+
+%ul
+  = @answers.each do |answer|
+    %li
+      = link_to answer.answer_title, school_test_student_answer_path(@test, answer)

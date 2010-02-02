@@ -10,6 +10,8 @@ class SchoolTest < ActiveRecord::Base
 	has_many :test_categories, :dependent => :destroy
 	has_one :grade_scale, :dependent => :destroy
 	
+	has_many :student_answers
+	
 	validates_uniqueness_of :name
 	accepts_nested_attributes_for :test_categories
 	accepts_nested_attributes_for :grade_scale

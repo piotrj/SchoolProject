@@ -1,0 +1,35 @@
+%h1
+  = @answer.school_test.name
+
+%dl
+  %dt
+    Imię
+  %dd
+    = @answer.first_name
+  %dt
+    Nazwisko
+  %dd
+    = @answer.last_name
+  %dt
+    Numer indesku
+  %dd
+    = @answer.student_number
+  %dt
+    Numer grupy
+  %dd
+    = @answer.group_number
+  %dt
+    IP
+  %dd
+    = @answer.ip
+
+
+%ul
+- @answer.student_question_answers.each do |question|
+  %li
+    = question.text
+    
+    %ul
+      - question.chosen_answers.each do |chosen_answer|
+        %li
+          = chosen_answer.text

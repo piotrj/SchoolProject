@@ -12,10 +12,12 @@ ActionController::Routing::Routes.draw do |map|
   	user.resources :categories
   end
   
-  map.resources :school_tests
+  map.resources :school_tests do |school_test|
+    school_test.resources :student_answers, :only => [:index, :show]
+  end
   map.resources :school_test_sessions, :only => [:new, :create]
   
-  map.resources :student_answers
+  map.resources :student_answers, :except => [:index, :show]
   
   map.resources :categories do |category|
     category.resources :questions
