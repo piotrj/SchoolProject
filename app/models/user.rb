@@ -2,7 +2,7 @@ class User < ActiveRecord::Base
   acts_as_authentic
   
   belongs_to :user_role
-  has_many :school_tests
+  has_many :school_tests, :dependent => :destroy
   has_many :categories
 
   def self.create_teacher(email)

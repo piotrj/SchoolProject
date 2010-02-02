@@ -1,4 +1,5 @@
 class SchoolTestsController < ResourceAccessController
+  
   def index
     if params[:user_id]
 	    @user = User.find(params[:user_id])
@@ -50,6 +51,13 @@ class SchoolTestsController < ResourceAccessController
         format.html { render :action => "edit"}
       end
     end
+  end
+  
+  def destroy
+  	@test = SchoolTest.find(params[:id])
+    @test.destroy
+    flash[:notice] = "Test usunięty pomyślnie"
+    redirect_to root_url
   end
 
 end

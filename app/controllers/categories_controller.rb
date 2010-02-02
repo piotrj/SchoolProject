@@ -2,10 +2,10 @@ class CategoriesController < ResourceAccessController
 	def index
     if params[:user_id]
   		@user = User.find(params[:user_id])
-  		@categories = @user.categories
   	else
-  		@categories = Category.all
+  		@user = current_user
   	end
+    @categories = @user.categories
   end
 	
 	def new
@@ -45,5 +45,12 @@ class CategoriesController < ResourceAccessController
         format.html { redirect_to url_for category_path(@category) }
       end
     end
+  end
+  
+  def destroy
+  	@category = SchoolTest.find(params[:id])
+    @category.destroy
+    flash[:notice] = "Kategoria została usunięta pomyślnie"
+    redirect_to categories_path
   end
 end
