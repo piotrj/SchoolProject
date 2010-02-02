@@ -57,7 +57,11 @@ class SchoolTestsController < ResourceAccessController
   	@test = SchoolTest.find(params[:id])
     @test.destroy
     flash[:notice] = "Test usunięty pomyślnie"
-    redirect_to root_url
+    if params[:user_id]
+    	redirect_to user_school_tests_path(params[:user_id])
+    else
+    	redirect_to school_tests_path
+    end
   end
 
 end

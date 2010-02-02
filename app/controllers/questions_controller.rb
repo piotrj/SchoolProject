@@ -49,4 +49,16 @@ class QuestionsController < ResourceAccessController
   def show
     @question = Question.find(params[:id])
   end
+  
+  def destroy
+  	@question = Question.find(params[:id])
+    @category = @question.category
+    @question.destroy
+    flash[:notice] = "Pytanie usunięto pomyślnie"
+    if params[:user_id]
+    	redirect_to user_category_path(params[:user_id],@category)
+    else
+    	redirect_to category_path(@category)
+    end
+  end
 end

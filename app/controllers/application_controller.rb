@@ -27,7 +27,7 @@ class ApplicationController < ActionController::Base
   end
   
   def require_admin_to_see_others
-    send_unauthoirzed unless (params[:user_id].nil? or current_user.admin?)
+    send_unauthorized unless (params[:user_id].nil? or current_user.admin?)
   end
 
   def send_unauthorized(message = "Unauthorized access")

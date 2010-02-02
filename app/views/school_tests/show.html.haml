@@ -4,7 +4,7 @@
   %li
     =link_to "Edytuj test", edit_school_test_path(@test)
   %li  
-    =link_to "Usuń test", school_test_path(@test), :method => :delete
+    =link_to "Usuń test", school_test_path(@test), :method => :delete, :confirm => 'Czy chcesz usunąć test?'
   %li
     =link_to "Pokaż odpowiedzi", school_test_student_answers_path(@test)
 %h2 

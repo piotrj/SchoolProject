@@ -8,7 +8,7 @@
     =link_to "Edytuj kategorię", edit_category_path(@category)
   - if @category.owned_by?(current_user)  
     %li
-      =link_to "Usuń kategorię", category_path(@category), :method => :delete, :confirm => 'Are you sure?'
+      =link_to "Usuń kategorię", category_path(@category), :method => :delete, :confirm => 'Czy chcesz usunąć kategorię i wszystkie pytania, które do niej należą?'
 
 %h2
   Lista pytań
