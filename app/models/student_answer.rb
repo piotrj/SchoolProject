@@ -11,7 +11,7 @@ class StudentAnswer < ActiveRecord::Base
 	
 	
 	def answer_title
-    student_number + " " + first_name + " " + last_name
+    student_number + " " + first_name + " " + last_name + " " + created_at.to_s.slice(0..10)
 	end
   
   def build_questions
