@@ -24,9 +24,9 @@ Rails::Initializer.run do |config|
   
   
   #development gems
-  config.gem "factory_girl", :source => "http://gemcutter.org"
-  config.gem "rspec", :version => ">= 1.2.8", :lib => false
-  config.gem "rspec-rails", :lib => false
+  # config.gem "factory_girl", :source => "http://gemcutter.org"
+  # config.gem "rspec", :version => ">= 1.2.8", :lib => false
+  # config.gem "rspec-rails", :lib => false
 
 
   # Only load the plugins named here, in the order given (default is alphabetical).

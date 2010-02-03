@@ -148,6 +148,11 @@ $(document).ready(function(){
 	$("#counter").everyTime("1s", "count", function() {
 		seconds = $("#seconds").text();
 		minutes = $("#minutes").text();
+		
+		if(seconds.charAt(0) == "0") {
+			seconds = seconds.charAt(1)
+		}
+		
 		if(parseInt(seconds) == 0) {
 			if(minutes == 0) {
 				$("#counter").stopTime("count")
@@ -157,7 +162,12 @@ $(document).ready(function(){
 				$("#minutes").text(parseInt(minutes)-1);
 			}
 		} else {
-			$("#seconds").text(parseInt(seconds)-1);
+
+			seconds = (parseInt(seconds) - 1).toString();
+			if (seconds.length == 1) {
+				seconds = "0" + seconds;
+			}
+			$("#seconds").text(seconds);
 		}
 	});
 	
