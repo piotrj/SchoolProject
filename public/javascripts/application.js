@@ -189,6 +189,7 @@ $(document).ready(function(){
 	$(".remove_category").show();
 	$(".remove_category").bind('click', function() {
 		$(this).parents(".category_input").find(".destroy_field").attr("value", "true")
+		$(this).parents(".category_input").hide()
 		return false;
 	});
 });
