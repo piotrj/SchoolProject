@@ -223,3 +223,35 @@ ol.answer_list li.incorrect span.question_text{
 #minutes, #seconds {
   text-align: center;
 }
+
+#categories_fields {
+  display: inline-block;
+  width: 500px;
+  padding: 10px;
+  background-color: #F1F1F1;
+}
+
+#available_categories {
+  display: inline-block;
+  width: 400px;
+  padding: 10px 0;
+}
+
+#available_categories .id {
+  display: none;
+}
+
+#available_categories ul {
+  list-style: none;
+}
+
+li.category_item {
+  padding: 5px 0 5px 20px;
+  width: 300px;
+  display: block;
+  border:1px #F1F1F1 solid;
+}
+
+.drop_hover {
+  background-color: #FFCECE !important;
+}

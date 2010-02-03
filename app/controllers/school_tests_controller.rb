@@ -17,14 +17,13 @@ class SchoolTestsController < ResourceAccessController
 	def new
     @test = SchoolTest.new
     @test.build_grade_scale
-    Category.for_user(current_user).each do |category|
-      @test.test_categories.build(:category => category, :school_test => @test)
-    end
+    @categories = current_user.categories
   end
   
   def create  	
   	@test=SchoolTest.new(params[:school_test])
   	@test.user=current_user
+  	@categories = current_user.categories
   	respond_to do |format|
       if @test.save
         flash[:notice] = t "flash.test.create.success"
@@ -38,10 +37,12 @@ class SchoolTestsController < ResourceAccessController
   
   def edit
     @test = SchoolTest.find(params[:id])
+    @categories = @test.user.categories
   end
   
   def update
     @test = SchoolTest.find(params[:id])
+    @categories = current_user.categories
     respond_to do |format|
       if @test.update_attributes(params[:school_test])
         flash[:notice] = t "flash.test.update.success"
@@ -64,4 +65,7 @@ class SchoolTestsController < ResourceAccessController
     end
   end
 
+  # def add_category
+  #   @category
+  # end
 end

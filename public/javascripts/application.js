@@ -12,6 +12,10 @@
  *
  **/
 
+jQuery.ajaxSetup({ 
+  'beforeSend': function(xhr) {xhr.setRequestHeader("Accept", "text/javascript")}
+})
+
 jQuery.fn.extend({
 	everyTime: function(interval, label, fn, times) {
 		return this.each(function() {
@@ -155,5 +159,36 @@ $(document).ready(function(){
 		} else {
 			$("#seconds").text(parseInt(seconds)-1);
 		}
+	});
+	
+	
+	$("#available_categories li").draggable({ helper: 'clone' });
+	$("#categories_fields").droppable({
+		hoverClass: 'drop_hover',
+		drop: function(event, ui) {
+			id = ui.draggable.find(".id").text()
+			text = ui.draggable.find(".name").text()
+			number = $(".category_input").size()
+			fields_html = '<p class="category_input">\
+			              <input type="hidden" value="myid" name="school_test[test_categories_attributes][mynumber][category_id]" id="school_test_test_categories_attributes_mynumber_category_id">\
+			              <label for="school_test_test_categories_attributes_mynumber_Liczba">mylabel</label>\
+			              <input type="text" size="30" name="school_test[test_categories_attributes][mynumber][number]" id="school_test_test_categories_attributes_mynumber_number">\
+										<a style="" href="#" class="remove_category_a">remove</a>\
+			            </p>';
+			
+	    fields_html = fields_html.replace(/myid/g,id)
+		  fields_html = fields_html.replace(/mylabel/g,text)
+		 	fields_html = fields_html.replace(/mynumber/g,number)
+			$(this).append(fields_html)
+			$(".remove_category_a").bind('click', function() {
+				$(this).parents(".category_input").remove();
+				return false;
+			});
+		}
+	});
+	$(".remove_category").show();
+	$(".remove_category").bind('click', function() {
+		$(this).parents(".category_input").find(".destroy_field").attr("value", "true")
+		return false;
 	});
 });

@@ -12,7 +12,7 @@ class SchoolTest < ActiveRecord::Base
 	has_many :student_answers
 	
 	validates_uniqueness_of :name
-	accepts_nested_attributes_for :test_categories
+	accepts_nested_attributes_for :test_categories, :allow_destroy => true
 	accepts_nested_attributes_for :grade_scale
 	
 	def active?
