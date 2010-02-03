@@ -54,6 +54,7 @@
         = category_form.hidden_field :category_id
         = category_form.label :Liczba, category_form.object.category.name
         = category_form.text_field :number
+        = category_form.hidden_field :_delete, :class => "destroy_field"
         %a{:class => "remove_category", :href => '#', :style => "display: none"}
           remove
   #available_categories
