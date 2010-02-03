@@ -2,6 +2,7 @@
   #user_nav
     Zalogowany jako 
     = current_user.email
-    = link_to "Wyloguj", logout_path
     = link_to "Edytuj Profil", edit_user_path(current_user)
+    = link_to "Wyloguj", logout_path
+    
 
