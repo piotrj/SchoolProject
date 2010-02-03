@@ -11,6 +11,8 @@ class TestCategory < ActiveRecord::Base
   end
   
   def number_of_questions
-    errors.add(:number, I18n.translate("test_category.errors.number_to_big")) if number > category.questions.count
+    if number
+      errors.add(:number, I18n.translate("test_category.errors.number_to_big")) if number > category.questions.count
+    end
   end
 end
