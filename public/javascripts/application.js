@@ -182,11 +182,13 @@ $(document).ready(function(){
 			$(this).append(fields_html)
 			$(".remove_category_a").bind('click', function() {
 				$(this).parents(".category_input").remove();
+				return false;
 			});
 		}
 	});
 	$(".remove_category").show();
 	$(".remove_category").bind('click', function() {
 		$(this).parents(".category_input").find(".destroy_field").attr("value", "true")
+		return false;
 	});
 });
